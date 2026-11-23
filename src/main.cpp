@@ -24,10 +24,21 @@ void setup(){
 void loop(){
     temp=dht.readTemperature();
     humid=dht.readHumidity();
-
+    // Check if any reads failed and exit early (to try again).
     if(isnan(temp) || isnan(humid)){
         lcd.setCursor(0,1);
         lcd.print("Failed to read.");
+    }
+    // Check if the temperature is above 30 degrees Celsius
+    else if(temp>30){
+        lcd.setCursor(0,1);
+        lcd.print("Temp: ");
+        lcd.print(temp);
+        lcd.setCursor(0,2);
+        lcd.print("Humid: ");
+        lcd.print(humid);
+        lcd.setCursor(0,3);
+        lcd.print("Warning: High Temp!");
     }
     else{
         lcd.setCursor(0,1);
