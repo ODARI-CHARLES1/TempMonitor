@@ -2,6 +2,7 @@
 
 An ESP32-based temperature and humidity monitoring project developed using **Wokwi, Visual Studio Code, and PlatformIO**.
 
+
 ![ESP32 Pinout and ESP-WROOM-32 Pinout](https://images.theengineeringprojects.com/image/main/2024/03/esp32-pinout.jpg)
 
 ![Block diagram](Images/DHT%20Temperature%20Sensor.png)
